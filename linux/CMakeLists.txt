@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 project(runner LANGUAGES CXX)
 
 set(BINARY_NAME "todo")
-set(APPLICATION_ID "com.example.todo")
+set(APPLICATION_ID "dev.akaboshinit.todo")
 
 cmake_policy(SET CMP0063 NEW)
 

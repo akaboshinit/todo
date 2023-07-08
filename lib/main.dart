@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:todo/license_page.dart';
 import 'package:todo/todo/widgets/todo_list_widget.dart';
 
 void main() async {
@@ -37,7 +38,22 @@ class _MyHomePageState extends State<MyHomePage> {
     return ProviderScope(
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Todo List'),
+          title: const Text('私のTodoList'),
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.book),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const AppLicensePage();
+                    },
+                  ),
+                );
+              },
+            ),
+          ],
         ),
         body: const TodoListWidget(),
       ),

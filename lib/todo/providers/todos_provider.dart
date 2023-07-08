@@ -16,11 +16,11 @@ final todosProvider = StateNotifierProvider<TodosProvider, TodoList>(
 
 class TodosProvider extends StateNotifier<TodoList> {
   final StorageRepository _storage;
-  final PlaceholderRepository _repository;
+  // final PlaceholderRepository _repository;
 
   TodosProvider({required storage, required repository})
       : _storage = storage,
-        _repository = repository,
+        // _repository = repository,
         super(TodoList.empty());
 
   Future<void> loadTodoList() async {
@@ -28,14 +28,14 @@ class TodosProvider extends StateNotifier<TodoList> {
     if (savedList.isNotEmpty) {
       state = savedList;
     } else {
-      state = await _repository.getTodoList();
-      _saveTodoList();
+      // state = await _repository.getTodoList();
+      // _saveTodoList();
     }
   }
 
   Future<void> _saveTodoList() async {
     await _storage.save(state);
-    await _repository.postTodoList(state);
+    // await _repository.postTodoList(state);
   }
 
   void addTodo(String title) {

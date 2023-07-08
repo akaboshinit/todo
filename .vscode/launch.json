@@ -1,0 +1,46 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "dev",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "flutterMode": "debug",
+            "args": [
+                "--dart-define=FLAVOR=dev"
+            ]
+        },
+        {
+            "name": "dev.firebase_emulator",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "flutterMode": "debug",
+            "args": [
+                "--dart-define=FLAVOR=dev",
+                "--dart-define=IS_EMULATOR=true"
+            ]
+        },
+        {
+            "name": "stg",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "flutterMode": "debug",
+            "args": [
+                "--dart-define=FLAVOR=stg"
+            ]
+        },
+        {
+            "name": "prd",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "flutterMode": "debug",
+            "args": [
+                "--dart-define=FLAVOR=prd"
+            ]
+        }
+    ]
+}

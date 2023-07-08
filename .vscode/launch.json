@@ -2,44 +2,38 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "dev",
-            "request": "launch",
-            "type": "dart",
-            "program": "lib/main.dart",
-            "flutterMode": "debug",
-            "args": [
-                "--dart-define=FLAVOR=dev"
-            ]
-        },
-        {
             "name": "dev.firebase_emulator",
             "request": "launch",
             "type": "dart",
             "program": "lib/main.dart",
             "flutterMode": "debug",
             "args": [
-                "--dart-define=FLAVOR=dev",
+                "--dart-define-from-file=flavors/dev.json",
                 "--dart-define=IS_EMULATOR=true"
             ]
         },
         {
-            "name": "stg",
-            "request": "launch",
             "type": "dart",
-            "program": "lib/main.dart",
-            "flutterMode": "debug",
+            "request": "launch",
+            "name": "dev",
             "args": [
-                "--dart-define=FLAVOR=stg"
+                "--dart-define-from-file=flavors/dev.json"
             ]
         },
         {
-            "name": "prd",
-            "request": "launch",
             "type": "dart",
-            "program": "lib/main.dart",
-            "flutterMode": "debug",
+            "request": "launch",
+            "name": "stg",
             "args": [
-                "--dart-define=FLAVOR=prd"
+                "--dart-define-from-file=flavors/stg.json"
+            ]
+        },
+        {
+            "type": "dart",
+            "request": "launch",
+            "name": "prd",
+            "args": [
+                "--dart-define-from-file=flavors/prd.json"
             ]
         }
     ]

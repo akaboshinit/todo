@@ -11,9 +11,9 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
     <key>CFBundleDisplayName</key>
-    <string>私のtodo</string>
+    <string>$(appName)</string>
 	<key>CFBundleName</key>
-	<string>todo</string>
+	<string>simple-todo</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>

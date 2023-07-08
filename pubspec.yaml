@@ -1,6 +1,4 @@
 name: todo
-description: A simple todo list app using https://jsonplaceholder.typicode.com
-
 publish_to: 'none'
 
 version: 1.0.1+1
